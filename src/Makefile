@@ -7,13 +7,9 @@ TARGETS  = gattlib.so
 OBJECTS  = att.o crypto.o uuid.o gatt.o gattrib.o btio.o log.o utils.o \
 	   gattservices.o gattlib.o bindings.o beacon.o
 
-ifeq ($(PYTHON_VER),3)
-  PYTHON_CONFIG = python3-config
-  BOOST_PYTHON  = boost_python-py34
-else
-  PYTHON_CONFIG = python-config
-  BOOST_PYTHON  = boost_python
-endif
+PY_SHORT_VERSION = $(shell python -c "import sys; vers = sys.version_info; print(str(vers.major) + str(vers.minor), sep='')")
+PYTHON_CONFIG = python-config
+BOOST_PYTHON  = boost_python-py$PY_SHORT_VERSION
 
 CFLAGS  += -ggdb -fPIC -Wall $$($(PYTHON_CONFIG) --includes) \
 	   -Ibluez $$(pkg-config --cflags glib-2.0)
