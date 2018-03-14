@@ -49,11 +49,13 @@ else:
 
 
 setup(
-    name='gattlib',
-    version="0.20150805",
-    description="Library to access Bluetooth LE devices",
+    name='pygattlib',
+    version="0.0.1",
+    description="Library to access Bluetooth LE devices. Fork of https://bitbucket.org/OscarAcena/pygattlib.",
     author="Oscar Acena",
     author_email="oscar.acena@gmail.com",
-    url="https://bitbucket.org/OscarAcena/pygattlib",
+    maintainer='Daniel Underwood',
+    maintainer_email='daniel.underwood13@gmail.com',
+    url="https://github.com/danielunderwood/pygattlib",
     ext_modules=extension_modules,
 )
