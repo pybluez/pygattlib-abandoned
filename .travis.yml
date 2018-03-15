@@ -3,7 +3,7 @@ os:
   - linux
 python:
   - "2.7"
-  - "3.6"
+  - "3.4"
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y libbluetooth-dev libboost-python-dev libboost-thread-dev libglib2.0-dev python-dev build-essential
