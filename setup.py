@@ -45,7 +45,7 @@ if sys.platform.startswith('linux'):
 
             libraries=glib_libs + boost_libs + ["boost_thread", "bluetooth"],
             include_dirs=glib_headers + ['src/bluez'],
-            define_macros=[('VERSION', '"5.25"')]
+            define_macros=[('VERSION', '"5.49"')]
 
         )
     ]
