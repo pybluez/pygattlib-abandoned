@@ -1,14 +1,16 @@
 language: python
 os:
   - linux
+services:
+  - docker
 python:
-  - "2.7"
-  - "3.4"
+  - "2"
+  - "3"
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y libbluetooth-dev libboost-python-dev libboost-thread-dev libglib2.0-dev python-dev build-essential
   - git submodule update --init
 install:
-  - python setup.py install
+  - docker build -t pygattlib -f .travis.Dockerfile --build-arg PYTHON_VERSION=$TRAVIS_PYTHON_VERSION.
 script:
-  - python -c "import gattlib"
+  - docker run --rm pygattlib
