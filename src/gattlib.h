@@ -16,11 +16,13 @@
 #include <glib.h>
 
 extern "C" {
+#include "btio/btio.h"
+#include "lib/sdp.h"
 #include "lib/uuid.h"
 #include "attrib/att.h"
 #include "attrib/gattrib.h"
 #include "attrib/gatt.h"
-#include "attrib/utils.h"
+#include "attrib/gatttool.h"
 }
 
 #include "event.hpp"
