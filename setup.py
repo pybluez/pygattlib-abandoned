@@ -29,6 +29,7 @@ if sys.platform.startswith('linux'):
              'src/beacon.cpp',
              'src/bindings.cpp',
              'src/gattlib.cpp',
+             'src/bluez/lib/bluetooth.c',
              'src/bluez/lib/uuid.c',
              'src/bluez/attrib/att.c',
              'src/bluez/attrib/gatt.c',
