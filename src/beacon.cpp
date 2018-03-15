@@ -3,7 +3,7 @@
 // Copyright (C) 2014, Oscar Acena <oscaracena@gmail.com>
 // This software is under the terms of Apache License v2 or later.
 
-#include <lib/bluetooth.h>
+#include <bluetooth/bluetooth.h>
 #include <bluetooth/hci.h>
 #include <bluetooth/hci_lib.h>
 

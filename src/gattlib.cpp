@@ -9,7 +9,7 @@
 #include <sys/ioctl.h>
 #include <iostream>
 
-#include <lib/bluetooth.h>
+#include <bluetooth/bluetooth.h>
 #include <bluetooth/l2cap.h>
 #include <bluetooth/hci.h>
 #include <bluetooth/hci_lib.h>
