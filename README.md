@@ -55,7 +55,10 @@ Compiling from source
 
 You should install the needed packages, which are described on `DEPENDS`
 file. Take special care about versions: libbluetooth-dev should be
-4.101 or greater. Then, just type:
+4.101 or greater. Note that bluez is kept in a submodule, so the repo
+should either initially be cloned by `git clone --recursive` or the
+submodules need to be initialized after cloning with
+`git submodule update --init` Then, just type:
 
     $ make
     [...]
