@@ -204,7 +204,7 @@ connect_cb(GIOChannel* channel, GError* err, gpointer userp) {
     if (cid == ATT_CID)
         mtu = ATT_DEFAULT_LE_MTU;
 
-    request->_attrib = g_attrib_new(channel, mtu);
+    request->_attrib = g_attrib_new(channel, mtu, false);
 
     g_attrib_register(request->_attrib, ATT_OP_HANDLE_NOTIFY,
             GATTRIB_ALL_HANDLES, events_handler, userp, NULL);
@@ -238,8 +238,7 @@ GATTRequester::connect(bool wait,
          psm,                      // 0, psm
          mtu,                      // 0, mtu
          connect_cb,
-         &gerr,
-         (gpointer)this);
+         &gerr);
 
     if (_channel == NULL) {
         _state = STATE_DISCONNECTED;

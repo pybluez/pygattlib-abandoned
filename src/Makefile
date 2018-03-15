@@ -9,12 +9,12 @@ OBJECTS  = att.o crypto.o uuid.o gatt.o gattrib.o btio.o log.o utils.o \
 
 PY_SHORT_VERSION = $(shell python -c "import sys; vers = sys.version_info; print(str(vers.major) + str(vers.minor), sep='')")
 PYTHON_CONFIG = python-config
-BOOST_PYTHON  = boost_python-py$PY_SHORT_VERSION
+BOOST_PYTHON  = boost_python-py$(PY_SHORT_VERSION)
 
 CFLAGS  += -ggdb -fPIC -Wall $$($(PYTHON_CONFIG) --includes) \
-	   -Ibluez $$(pkg-config --cflags glib-2.0)
+	   -Ibluez -Ibluez/lib -Ibluez/btio $$(pkg-config --cflags glib-2.0)
 
-CFLAGS  += -DVERSION='"5.25"'
+CFLAGS  += -DVERSION='"5.49"'
 CXXFLAGS = $(CFLAGS)
 LDFLAGS  = -l$(BOOST_PYTHON) -lboost_thread -lbluetooth \
 	   $$(pkg-config --libs glib-2.0)
