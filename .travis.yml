@@ -3,7 +3,7 @@ os:
   - linux
 services:
   - docker
-environment:
+env:
   - PYTHON_VERSION=2
   - PYTHON_VERSION=3
 before_install:
