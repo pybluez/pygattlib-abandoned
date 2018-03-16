@@ -10,4 +10,4 @@ RUN apt-get -qq update \
     && virtualenv -p `which python$PYTHON_VERSION` venv \
     && venv/bin/python setup.py install
 
-CMD ['venv/bin/python', '-c', '"import gattlib"']
+CMD ['/pygattlib/venv/bin/python', '-c', '"import gattlib"']
