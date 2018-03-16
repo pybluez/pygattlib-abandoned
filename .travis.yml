@@ -9,7 +9,6 @@ env:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y libbluetooth-dev libboost-python-dev libboost-thread-dev libglib2.0-dev python-dev build-essential
-  - git submodule update --init
 install:
   - docker build -t pygattlib -f .travis.Dockerfile --build-arg PYTHON_VERSION=$PYTHON_VERSION .
 script:
