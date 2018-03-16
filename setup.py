@@ -56,7 +56,7 @@ else:
 
 setup(
     name='pygattlib',
-    version="0.0.3",
+    version="0.0.4",
     description="Library to access Bluetooth LE devices. Fork of https://bitbucket.org/OscarAcena/pygattlib.",
     author="Oscar Acena",
     author_email="oscar.acena@gmail.com",
