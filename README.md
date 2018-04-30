@@ -34,23 +34,9 @@ Python pip
 
 Install as ever (you may need to install the packages listed on `DEPENDS` files):
 
-    $ sudo pip install gattlib
+    $ sudo pip install pygattlib
 
 You can install for Python3 too, just use `pip3`
-
-Debian way
-----------
-
-Add the following line to your sources list:
-
-    deb http://babel.esi.uclm.es/arco sid main
-
-And install using apt-get (or similar):
-
-    $ sudo apt-get update
-    $ sudo apt-get install python-gattlib
-
-You can install for Python3 too (Debian package is called `python3-gattlib`).
 
 Compiling from source
 ---------------------
