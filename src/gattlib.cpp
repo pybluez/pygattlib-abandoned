@@ -585,6 +585,20 @@ boost::python::list GATTRequester::discover_characteristics(int start, int end,
 
 }
 
+static void exchange_mtu_cb(guint8 status, const guint8 *pdu, guint16 len,
+        gpointer user_data) {
+}
+
+void GATTRequester::exchange_mtu(uint16_t mtu) {
+    check_connected();
+
+    if (mtu > 0) {
+        gatt_exchange_mtu(_attrib, mtu, exchange_mtu_cb, (gpointer)NULL);
+    } else {
+        throw std::runtime_error("Invalid MTU");
+    }
+}
+
 void GATTRequester::check_connected() {
     if (_state != STATE_CONNECTED)
         throw std::runtime_error("Not connected");
