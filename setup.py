@@ -15,8 +15,8 @@ if sys.platform.startswith('linux'):
 
     glib_libs = subprocess.check_output(
         "pkg-config --libs glib-2.0".split()).decode('utf-8')
-    glib_libs = glib_libs.strip().split("-l")
-    glib_libs = [x.strip() for x in glib_libs if x]
+    glib_libs = glib_libs.strip().split(" ")
+    glib_libs = [x.strip()[2:] for x in glib_libs if x]
 
     if sys.version_info.major == 3:
         boost_libs = ["boost_python-py3"+str(sys.version_info.minor)]
