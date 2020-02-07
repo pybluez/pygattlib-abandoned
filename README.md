@@ -1,3 +1,5 @@
+# This repository is abandoned. Please use the [official repo](https://bitbucket.org/OscarAcena/pygattlib/).
+
 [![Build Status](https://travis-ci.org/pybluez/pygattlib.svg?branch=master)](https://travis-ci.org/pybluez/pygattlib)
 
 Index
